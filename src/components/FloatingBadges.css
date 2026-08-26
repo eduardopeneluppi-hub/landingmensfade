@@ -1,0 +1,25 @@
+.floating-badge {
+  animation: floatY 4.5s ease-in-out infinite;
+}
+
+.floating-badge--delay-1 {
+  animation-delay: -1.1s;
+}
+
+.floating-badge--delay-2 {
+  animation-delay: -2.3s;
+}
+
+.floating-badge--delay-3 {
+  animation-delay: -3.4s;
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}

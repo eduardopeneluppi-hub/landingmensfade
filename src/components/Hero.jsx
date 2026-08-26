@@ -3,7 +3,7 @@ import tiagoPhoto from '../assets/images/tiago-hero.png'
 import mensFadeLogo from '../assets/images/mens-fade-logo.webp'
 import Scanner from './Scanner'
 import PearlButton from './PearlButton'
-import Specialties from './Specialties'
+import FloatingBadges from './FloatingBadges'
 
 export default function Hero() {
   return (
@@ -47,7 +47,7 @@ export default function Hero() {
         Curso prático
       </p>
       <h1
-        className="font-archivo-black absolute top-[18%] left-1/2 z-[2] w-full -translate-x-1/2 -translate-y-1/2 px-2 text-center text-4xl leading-none text-black uppercase sm:text-8xl"
+        className="font-archivo-black absolute top-[18%] left-1/2 z-[2] w-full -translate-x-1/2 -translate-y-1/2 px-2 text-center text-[2.1rem] leading-none text-black uppercase sm:text-8xl"
         style={{ WebkitTextStroke: '1px black' }}
       >
         APERFEIÇOAMENTO
@@ -62,13 +62,8 @@ export default function Hero() {
         alt="Tiago"
         className="absolute top-[41.5%] left-1/2 z-10 h-[70%] w-auto -translate-x-1/2 -translate-y-1/2 object-contain"
       />
-      <p className="font-sans absolute top-[80%] left-1/2 z-20 w-full -translate-x-1/2 -translate-y-1/2 px-2 text-center text-[10px] font-light tracking-[0.3em] text-black uppercase sm:text-sm">
-        Você vai se especializar em
-      </p>
-      <div className="absolute top-[85%] left-0 z-20 w-full -translate-y-1/2">
-        <Specialties />
-      </div>
-      <div className="absolute top-[96%] left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
+      <FloatingBadges />
+      <div className="absolute top-[85%] left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
         <PearlButton>Quero ser um Men's Fade</PearlButton>
       </div>
     </section>

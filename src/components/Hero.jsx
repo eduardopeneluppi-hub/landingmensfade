@@ -4,6 +4,7 @@ import mensFadeLogo from '../assets/images/mens-fade-logo.webp'
 import titleBadge from '../assets/images/title-badge.webp'
 import SparkleButton from './SparkleButton'
 import FloatingBadges from './FloatingBadges'
+import RotatingWord from './RotatingWord'
 
 export default function Hero() {
   return (
@@ -32,7 +33,10 @@ export default function Hero() {
         className="absolute top-[41.5%] left-1/2 z-10 h-[70%] w-auto -translate-x-1/2 -translate-y-1/2 object-contain"
       />
       <FloatingBadges />
-      <div className="absolute top-[85%] left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
+      <p className="font-archivo-black absolute top-[81%] left-1/2 z-20 w-full -translate-x-1/2 -translate-y-1/2 px-6 text-center text-lg leading-tight text-black uppercase sm:text-3xl">
+        Vire <RotatingWord /> em qualquer estilo de corte masculino
+      </p>
+      <div className="absolute top-[89%] left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
         <SparkleButton size="lg">Quero ser um Men's Fade</SparkleButton>
       </div>
     </section>

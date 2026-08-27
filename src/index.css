@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Jost:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Jost:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons&display=block');
 @import 'tailwindcss';
 
@@ -6,6 +6,7 @@
   --font-display: 'Bodoni Moda', 'Times New Roman', serif;
   --font-sans: 'Jost', system-ui, sans-serif;
   --font-archivo-black: 'Archivo Black', sans-serif;
+  --font-anton: 'Anton', sans-serif;
 }
 
 :root {

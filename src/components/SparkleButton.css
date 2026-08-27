@@ -1,0 +1,235 @@
+.spark-btn-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.spark-btn {
+  --border-radius: 999px;
+  --padding: 3px;
+  --transition: 0.4s;
+  --button-color: #101010;
+  --highlight-color-hue: 210deg;
+
+  position: relative;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 0.9em 0.5em 0.8em;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  background-color: var(--button-color);
+
+  box-shadow:
+    inset 0px 1px 1px rgba(255, 255, 255, 0.2),
+    inset 0px 2px 2px rgba(255, 255, 255, 0.15),
+    inset 0px 4px 4px rgba(255, 255, 255, 0.1),
+    inset 0px 8px 8px rgba(255, 255, 255, 0.05),
+    inset 0px 16px 16px rgba(255, 255, 255, 0.05),
+    0px -1px 1px rgba(0, 0, 0, 0.02),
+    0px -2px 2px rgba(0, 0, 0, 0.03),
+    0px -4px 4px rgba(0, 0, 0, 0.05),
+    0px -8px 8px rgba(0, 0, 0, 0.06),
+    0px -16px 16px rgba(0, 0, 0, 0.08);
+
+  border: solid 1px #fff2;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+
+  transition:
+    box-shadow var(--transition),
+    border var(--transition),
+    background-color var(--transition);
+}
+
+.spark-btn::before {
+  content: '';
+  position: absolute;
+  top: calc(0px - var(--padding));
+  left: calc(0px - var(--padding));
+  width: calc(100% + var(--padding) * 2);
+  height: calc(100% + var(--padding) * 2);
+  border-radius: calc(var(--border-radius) + var(--padding));
+  pointer-events: none;
+  background-image: linear-gradient(0deg, #0004, #000a);
+
+  z-index: -1;
+  transition:
+    box-shadow var(--transition),
+    filter var(--transition);
+  box-shadow:
+    0 -8px 8px -6px #0000 inset,
+    0 -16px 16px -8px #00000000 inset,
+    1px 1px 1px #fff2,
+    2px 2px 2px #fff1,
+    -1px -1px 1px #0002,
+    -2px -2px 2px #0001;
+}
+
+.spark-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  pointer-events: none;
+  background-image: linear-gradient(
+    0deg,
+    #fff,
+    hsl(210deg, 100%, 70%),
+    hsla(210deg, 100%, 70%, 50%),
+    8%,
+    transparent
+  );
+  background-position: 0 0;
+  opacity: 0;
+  transition:
+    opacity var(--transition),
+    filter var(--transition);
+}
+
+.spark-btn-letter {
+  position: relative;
+  display: inline-block;
+  color: #ff8c1a99;
+  animation: spark-letter-anim 2s ease-in-out infinite;
+  transition:
+    color var(--transition),
+    text-shadow var(--transition),
+    opacity var(--transition);
+}
+
+@keyframes spark-letter-anim {
+  50% {
+    text-shadow: 0 0 3px #ff8c1acc;
+    color: #ff8c1a;
+  }
+}
+
+.spark-btn-svg {
+  flex-shrink: 0;
+  height: 15px;
+  margin-right: 0.45rem;
+  fill: #e8e8e8;
+  animation: spark-flicker 2s linear infinite;
+  animation-delay: 0.5s;
+  filter: drop-shadow(0 0 2px #fff9);
+  transition:
+    fill var(--transition),
+    filter var(--transition),
+    opacity var(--transition);
+}
+
+@keyframes spark-flicker {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.spark-txt-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.spark-lg .spark-btn {
+  font-size: 1.05rem;
+  padding: 0.75em 1.4em 0.75em 1.15em;
+}
+
+.spark-lg .spark-btn-svg {
+  height: 22px;
+  margin-right: 0.6rem;
+}
+
+/* Focus state */
+.spark-btn:focus .spark-btn-letter {
+  animation:
+    spark-focused-letter-anim 1s ease-in-out forwards,
+    spark-letter-anim 1.2s ease-in-out infinite;
+}
+
+@keyframes spark-focused-letter-anim {
+  0%,
+  100% {
+    filter: blur(0px);
+  }
+  50% {
+    transform: scale(1.6);
+    filter: blur(6px) brightness(150%)
+      drop-shadow(-16px 6px 6px hsl(210deg, 100%, 70%));
+  }
+}
+
+.spark-btn:focus .spark-btn-svg {
+  animation-duration: 1.2s;
+  animation-delay: 0.2s;
+}
+
+.spark-btn:focus::before {
+  box-shadow:
+    0 -8px 12px -6px #fff3 inset,
+    0 -16px 16px -8px hsla(210deg, 100%, 70%, 20%) inset,
+    1px 1px 1px #fff3,
+    2px 2px 2px #fff1,
+    -1px -1px 1px #0002,
+    -2px -2px 2px #0001;
+}
+.spark-btn:focus::after {
+  opacity: 0.6;
+  mask-image: linear-gradient(0deg, #fff, transparent);
+  filter: brightness(100%);
+}
+
+/* Active state */
+.spark-btn:active {
+  border: solid 1px hsla(210deg, 100%, 80%, 70%);
+  background-color: hsla(210deg, 50%, 20%, 0.5);
+}
+.spark-btn:active::before {
+  box-shadow:
+    0 -8px 12px -6px #fffa inset,
+    0 -16px 16px -8px hsla(210deg, 100%, 70%, 80%) inset,
+    1px 1px 1px #fff4,
+    2px 2px 2px #fff2,
+    -1px -1px 1px #0002,
+    -2px -2px 2px #0001;
+}
+.spark-btn:active::after {
+  opacity: 1;
+  mask-image: linear-gradient(0deg, #fff, transparent);
+  filter: brightness(200%);
+}
+.spark-btn:active .spark-btn-letter {
+  text-shadow: 0 0 1px hsla(210deg, 100%, 90%, 90%);
+  animation: none;
+}
+
+/* Hover state */
+.spark-btn:hover {
+  border: solid 1px hsla(210deg, 100%, 80%, 40%);
+}
+.spark-btn:hover::before {
+  box-shadow:
+    0 -8px 8px -6px #fffa inset,
+    0 -16px 16px -8px hsla(210deg, 100%, 70%, 30%) inset,
+    1px 1px 1px #fff2,
+    2px 2px 2px #fff1,
+    -1px -1px 1px #0002,
+    -2px -2px 2px #0001;
+}
+.spark-btn:hover::after {
+  opacity: 1;
+  mask-image: linear-gradient(0deg, #fff, transparent);
+}
+.spark-btn:hover .spark-btn-svg {
+  fill: #fff;
+  filter: drop-shadow(0 0 3px hsl(210deg, 100%, 70%)) drop-shadow(0 -4px 6px #0009);
+  animation: none;
+}

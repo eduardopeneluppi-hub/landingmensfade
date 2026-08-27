@@ -1,7 +1,8 @@
 import heroBg from '../assets/images/hero-bg.png'
 import tiagoPhoto from '../assets/images/tiago-hero.png'
 import mensFadeLogo from '../assets/images/mens-fade-logo.webp'
-import PearlButton from './PearlButton'
+import titleBadge from '../assets/images/title-badge.webp'
+import SparkleButton from './SparkleButton'
 import FloatingBadges from './FloatingBadges'
 
 export default function Hero() {
@@ -12,15 +13,14 @@ export default function Hero() {
         alt=""
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
-      <p className="font-sans absolute top-[14.5%] left-1/2 z-[2] w-full -translate-x-1/2 -translate-y-1/2 px-2 text-center text-xs font-light tracking-[0.4em] text-black uppercase sm:text-lg">
+      <p className="font-sans absolute top-[13.5%] left-1/2 z-[2] w-full -translate-x-1/2 -translate-y-1/2 px-2 text-center text-xs font-light tracking-[0.4em] text-black uppercase sm:text-lg">
         Curso prático
       </p>
-      <h1
-        className="font-archivo-black absolute top-[18%] left-1/2 z-[2] w-full -translate-x-1/2 -translate-y-1/2 px-2 text-center text-[2.1rem] leading-none text-black uppercase sm:text-8xl"
-        style={{ WebkitTextStroke: '1px black' }}
-      >
-        APERFEIÇOAMENTO
-      </h1>
+      <img
+        src={titleBadge}
+        alt="Aperfeiçoamento"
+        className="absolute top-[18%] left-1/2 z-[2] w-[88%] max-w-xl -translate-x-1/2 -translate-y-1/2 sm:w-[60%]"
+      />
       <img
         src={mensFadeLogo}
         alt=""
@@ -33,7 +33,7 @@ export default function Hero() {
       />
       <FloatingBadges />
       <div className="absolute top-[85%] left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
-        <PearlButton>Quero ser um Men's Fade</PearlButton>
+        <SparkleButton size="lg">Quero ser um Men's Fade</SparkleButton>
       </div>
     </section>
   )

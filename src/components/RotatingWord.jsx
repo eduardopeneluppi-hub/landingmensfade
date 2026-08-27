@@ -12,7 +12,7 @@ export default function RotatingWord() {
       const timeout = setTimeout(() => {
         setIndex(i => (i + 1) % words.length)
         setVisible(true)
-      }, 200)
+      }, 450)
       return () => clearTimeout(timeout)
     }, 3000)
     return () => clearInterval(interval)
@@ -20,8 +20,12 @@ export default function RotatingWord() {
 
   return (
     <span
-      className="font-anton inline-block text-[#ff8c1a] transition-opacity duration-200"
-      style={{ opacity: visible ? 1 : 0 }}
+      className="font-anton inline-block text-[#ff8c1a] transition-all duration-500 ease-in-out"
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? 'translateY(0) scale(1)' : 'translateY(10px) scale(0.94)',
+        filter: visible ? 'blur(0px)' : 'blur(4px)'
+      }}
     >
       {words[index]}
     </span>

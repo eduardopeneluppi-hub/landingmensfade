@@ -39,7 +39,7 @@ export default function Hero() {
         </span>
         <span className="block">em qualquer estilo de corte masculino</span>
       </p>
-      <div className="absolute top-[91%] left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute top-[91.5%] left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
         <SparkleButton size="lg">Quero ser um Men's Fade</SparkleButton>
       </div>
     </section>

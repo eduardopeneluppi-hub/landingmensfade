@@ -13,7 +13,7 @@ export default function Hero() {
         alt=""
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
-      <p className="font-sans absolute top-[16.5%] left-1/2 z-[2] w-full -translate-x-1/2 -translate-y-1/2 px-2 text-center text-xs font-light tracking-[0.4em] text-black uppercase sm:text-lg">
+      <p className="font-sans absolute top-[15%] left-1/2 z-[2] w-full -translate-x-1/2 -translate-y-1/2 px-2 text-center text-xs font-semibold tracking-[0.4em] text-black uppercase sm:text-lg">
         Curso prático
       </p>
       <img

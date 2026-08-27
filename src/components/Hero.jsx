@@ -33,13 +33,13 @@ export default function Hero() {
         className="absolute top-[41.5%] left-1/2 z-10 h-[70%] w-auto -translate-x-1/2 -translate-y-1/2 object-contain"
       />
       <FloatingBadges />
-      <p className="font-archivo-black absolute top-[81%] left-1/2 z-20 w-full -translate-x-1/2 -translate-y-1/2 px-6 text-center text-lg leading-tight text-black uppercase sm:text-3xl">
+      <p className="font-archivo-black absolute top-[82.5%] left-1/2 z-20 w-full -translate-x-1/2 -translate-y-1/2 px-6 text-center text-lg leading-tight text-black uppercase sm:text-3xl">
         <span className="block">
           Vire <RotatingWord />
         </span>
         <span className="block">em qualquer estilo de corte masculino</span>
       </p>
-      <div className="absolute top-[89%] left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute top-[91%] left-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
         <SparkleButton size="lg">Quero ser um Men's Fade</SparkleButton>
       </div>
     </section>

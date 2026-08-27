@@ -13,13 +13,13 @@ export default function Hero() {
         alt=""
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
-      <p className="font-sans absolute top-[13.5%] left-1/2 z-[2] w-full -translate-x-1/2 -translate-y-1/2 px-2 text-center text-xs font-light tracking-[0.4em] text-black uppercase sm:text-lg">
+      <p className="font-sans absolute top-[16.5%] left-1/2 z-[2] w-full -translate-x-1/2 -translate-y-1/2 px-2 text-center text-xs font-light tracking-[0.4em] text-black uppercase sm:text-lg">
         Curso prático
       </p>
       <img
         src={titleBadge}
         alt="Aperfeiçoamento"
-        className="absolute top-[18%] left-1/2 z-[2] w-[88%] max-w-xl -translate-x-1/2 -translate-y-1/2 sm:w-[60%]"
+        className="absolute top-[22%] left-1/2 z-[2] w-[88%] max-w-xl -translate-x-1/2 -translate-y-1/2 sm:w-[60%]"
       />
       <img
         src={mensFadeLogo}
